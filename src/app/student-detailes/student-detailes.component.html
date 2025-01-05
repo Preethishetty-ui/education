@@ -1,0 +1,78 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="Student">
+  <h1>Student Detailes</h1>
+  <label>Name</label>
+  <input type="text" id="name" formControlName="name"><br>
+  <div *ngIf="form.get('name')?.invalid &&form.get('name')?.touched">
+    Name is required.
+  </div>
+  <label>father name</label>
+  <input type="text" id="fname" formControlName="fname"><br>
+  <div *ngIf="form.get('fname')?.invalid && form.get('fname')?.touched">
+    father name is required
+  </div>
+<label>standerd</label>
+  <input type="text" id="standrd" formControlName="standrd"><br>
+  <div *ngIf="form.get('standrd')?.invalid && form.get('standrd')?.touched">
+    standrd is required.
+  </div>
+  <label>E-mail</label>
+  <input type="email" id="email" formControlName="email"><br>
+  <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+    E-mail is required.
+  </div>
+  <label>Phone</label>
+  <!-- <input type="number" id="phone" formControlName="phone"><br>
+  <div *ngIf="form.get('phone')?.invalid && form.get('phone')?.touched">
+    phone is required.
+  </div> -->
+
+  <button type="submit">Submit</button>
+</form> 
+<!-- <table>
+  <thead>
+    <tr>
+      <th *ngFor="let column of columns">{{ column }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of tableData">
+      <td>{{ row.id }}</td>
+      <td>{{ row.name }}</td>
+      <td>{{ row.age }}</td>
+    </tr>
+  </tbody>
+</table> -->
+<!-- 
+ <form [fromgroup]="form"(ngSubmit)="onSubmit()"> -->
+ <!-- <form [formGroup]="form">
+  <label>name</label>
+  <input type="text" id="name" FormControl="name">
+  <div *ngIf="form.get('name')?.invalid && form .get('name')?.touched"> 
+    name is required.
+  </div>
+  <label>father Name</label>
+  <input type="text" id="fname" formControlName="name">
+  <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+    </div>
+</form> -->
+<table class="table table-bordered table" >
+  <thead>
+    <tr>
+      <th *ngFor="let column of columns">{{ column }}</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of users ; index as i">
+      <td>{{ row.name }}</td>
+      <td>{{ row.fname }}</td>
+      <td>{{ row.standrd }}</td>
+      <td>{{ row.email }}</td>
+      <td>
+        <button (click)="deleteItem(i)">Delete</button>
+        <button (click)="editFunction(row,i)">edit</button>
+      </td>
+
+
+    </tr>
+  </tbody>
+</table>

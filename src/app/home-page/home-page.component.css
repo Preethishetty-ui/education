@@ -1,0 +1,81 @@
+
+.icon1{
+    margin: 5px;
+    padding: 20px;
+    font-size:25px;
+}
+
+.icon3{
+    margin: 5px; 
+    float: right;
+    padding-bottom: 90px;
+    padding: 5px;
+   
+}
+.icon2{
+    margin: 5px; 
+    float: right;
+    padding: 5px;
+    color: white;
+}
+.icon{
+    border: 1px solid rgb(198, 55, 36);
+    padding: 30px;
+    background-color:rgb(198, 55, 36);
+    /* color: white; */
+}
+.icon a{
+ color: white;
+}
+.head{
+    font-size: 25px;
+    text-decoration: none;
+   
+}
+.sideNav{
+    background-color: rgb(83, 80, 80);
+    height: 100%;
+    width: 20%;
+    color: white;
+    font-size: 15px;
+    padding-top: 20px;
+    /* padding: 8px 8px 8px 32px; */
+    position: fixed;
+    bottom: -6px;
+    margin: 2px;
+}
+    .closebtn {
+        /* position: absolute;
+        top: 0; */
+        float: right;
+        font-size: 30px;
+        margin-top: -20px;
+        color: white;
+        text-decoration: none;
+   
+      }
+.sideNav ul{
+    list-style-type: none;
+}
+.sideNav p{
+    padding-top: 20px;
+}
+.sideNav i{
+    padding: 10px;
+}
+.sideNav h6{
+    margin: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+    .sideNav{
+        width: 95%;
+    }
+}
+.sideNav strong{
+    padding: 30PX;
+}
+strong:hover {
+    background-color: yellow;
+    font-size: 18px;
+  }

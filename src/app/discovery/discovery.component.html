@@ -1,0 +1,14 @@
+<!-- <div class="row" id="discover" *ngIf="discoverItems">
+    <div class="col s4 item" *ngFor="let item of discoverItems">
+      <div class="menus">
+      </div>
+      <span>{{item.title}}</span>
+    </div>
+  </div> -->
+  <div class="back">
+  <div class="accordion" *ngFor="let item of studetItems">
+    <!-- <button class="accordion"><i class='far fa-calendar-check-left'></i><i class="fa fa-angle-right"></i>Attendance</button> -->
+  <a routerLink={{item.path}} ><span ><i [ngClass]="item.icon"></i>  {{item.title}}<i class='fa fa-angle-right rightAlign'></i></span></a>   
+  </div>
+</div>
+ 

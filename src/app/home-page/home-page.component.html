@@ -1,0 +1,44 @@
+<header>
+    
+    <div class="icon">
+        <!-- {{show}} -->
+        <span>
+           <span class="icon1"> <a  (click)="showBar()" ><i class="fa fa-bars"></i></a></span>
+            <a class="head">Dashboard</a>
+            <span class="icon3">  <a href=""><i class='fas fa-redo' style='font-size:24px'></i></a></span>
+            <span class="icon2"> <a href=""><i class='fas fa-bell' style='font-size:24px'></i></a></span> 
+            
+        </span>
+    </div>
+    </header>
+
+    
+
+
+
+    <div class="sideNav" *ngIf="show">
+        <!-- <ul>
+            <li>
+            <a href="" class="closebtn" onclick="closeNav()">×</a></li>
+          <li><i class='fas fa-user-alt'></i>MY Classmates</li>
+          <li> <i class="fa fa-pencil-square-o"></i>Notice Board</li>
+          <li><i class='fas fa-bullhorn'></i>Class Annocement</li>
+          <li><i class="fas fa-hourglass"></i>My Progress</li>
+          <li><i class="fas fa-pencil"></i>My Assignments</li>
+          <li><i class="fas fa-person"></i>My Projects</li>
+          <li><i class="fas fa-question"></i>Quiz</li>
+          <h6>MAIN MENU</h6>
+          <li><i class='fas fa-phone'></i>Helaps</li>
+          <li><i class='far fa-list-alt'></i>Setting</li>
+          <li><i class='fas fa-user-shield'></i>Security</li>
+
+        </ul> -->
+        <a href="" class="closebtn" onclick="closeNav()">×</a>
+        <div class="accordion" *ngFor="let item of studetItems">
+    <!-- <button class="accordion"><i class='far fa-calendar-check-left'></i><i class="fa fa-angle-right"></i>Attendance</button> -->
+     <span *ngIf="item.title !== 'MAIN MENU'"><i [ngClass]="item.icon"></i>  {{item.title}}</span>
+     <span *ngIf="item.title == 'MAIN MENU'" ><strong>{{item.title}}</strong> </span>
+     </div>
+    </div>
+    <app-discovery></app-discovery>
+    

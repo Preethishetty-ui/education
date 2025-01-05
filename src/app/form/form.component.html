@@ -1,0 +1,28 @@
+<form [formGroup]="form"(ngSubmit)="onSubmit()">
+    <label>name</label>
+    <input type ="text" id="name" formControlName="name"><br>
+    <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+name is required.
+    </div>
+    <label>father Name</label>
+    <input type ="text" id="fname" formControlName="fname"><br>
+    <div *ngIf="form.get('fname')?.invalid && form.get('fname')?.touched">
+name is required.
+    </div>
+    <button type="submit">submit</button>
+</form>
+<table class="table table-bordered table" >
+    <thead>
+        <tr>
+            <th *ngFor="let column of columns">{{column}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of user; i of index">
+            <td>{{row.name}}</td>
+            <td>{{row.fname}}</td>
+            <!-- <button (click)="deleteIteam(i)">delete</button>
+            <button></button>
+        </tr>
+    </tbody> -->
+</table>

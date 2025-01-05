@@ -1,0 +1,88 @@
+<form [formGroup]="details"(ngSubmit)="onSubmit()" class="Detailes">
+    <h2>Student details</h2>
+    <div class="row">
+<div class="col-sm-6">
+        <label>class</label>
+        <input type="text" id="class" formControlName="class">
+        <div *ngIf="details.get('class')?.invalid && details.get('class')?.touched">
+            class is required.
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <label>Division</label>
+        <input type="text" id="Div" formControlName="Div"><br>
+        <div *ngIf="details.get('Div')?.invalid && details.get('Div')?.touched">
+            Division is required.
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+    <label>Gender</label>
+    <input type="text" id="Gender" formControlName="Gender">
+    <div *ngIf="details.get('Gender')?.invalid && details.get('Gender')?.touched">
+        Gender is required.
+    </div>
+</div>
+<div class="col-sm-6">
+    <label>Caste</label>
+    <input type="text" id="Caste" formControlName="Caste"><br>
+    <div *ngIf="details.get('Caste')?.invalid && details.get('Caste')?.touched">
+        Caste is required.
+    </div>
+</div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+    <label>Religion</label>
+    <input type="text" id="Religion" formControlName="Religion">
+    <div *ngIf="details.get('Religion')?.invalid && details.get('Religion')?.touched">
+        Religion is required.
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <label>Nationality</label>
+    <input type="text" id="Nationality" formControlName="Nationality"><br>
+    <div *ngIf="details.get('Nationality')?.invalid && details.get('Nationality')?.touched">
+        Nationality is required.
+    </div>
+</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+    <label>Addresses</label>
+    <textarea id="addresses" formControlName="addresses"></textarea><br>
+    <div *ngIf="details.get('addresses')?.invalid && details.get('addresses')?.touched">
+        Nationality is required.
+    </div>
+</div>
+</div>
+    <button type="submit" class="btn" [disabled]="details.invalid">Add</button>
+    
+    </form>
+    <table class="table table-bordered table">
+        <thead>
+            <tr>
+                <th *ngFor="let column of columns">{{column}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of student index as i">
+                <td>{{row.name}}</td>
+                <td>{{row.Phone}}</td>
+                <td>{{row.div}}</td>
+                <td>{{row.Gender}}</td>
+                <td>{{row.Caste}}</td>
+                <td>{{row.Religion}}</td>
+                <td>{{row.Nationality}}</td>
+                <td>{{row.Addrese}}</td>
+                <td>{{row.Update}}</td>
+    
+                <td>
+                    <button (click)="deleteItem(i)">Delete</button>
+                    <button (click)="editFunction(row,i)">edit</button>
+    
+                </td>
+            </tr>
+        </tbody>
+    </table>

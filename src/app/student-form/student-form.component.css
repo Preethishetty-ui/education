@@ -1,0 +1,31 @@
+.Detailes{
+    border: 1px solid black;
+    padding: 5px;
+    margin: 20px;
+    /* width: 50%; */
+    /* text-align: center; */
+    background-color: rgb(230, 222, 222);
+}
+label{
+    padding: 10px;
+    margin: 5px;
+    width: 35%;
+}
+button{
+    background-color: red;
+    border-radius: 8px;
+   padding: 15px;
+   margin: 13px;
+   color: white;
+   /* float: left; */
+
+.label button{
+    float:right;
+}
+    
+}
+.table{
+    text-align: center;
+    width: 79%;
+    margin: auto;
+}
